@@ -45,6 +45,10 @@ public class main {
                 sorts.selectionSort(numeros, 10);
                 sorts.toString(numeros,10);
                 break;
+            case 2:
+               sorts.sort(numeros,0,10);
+               sorts.toString(numeros,10);
+               break;
         }
     }
 }
