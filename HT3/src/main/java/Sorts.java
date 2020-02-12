@@ -52,7 +52,7 @@ public class Sorts {
                 i++;
             }
             else{
-                data[k]=B[i];
+                data[k]=B[j];
                 j++;
             }
             k++;
