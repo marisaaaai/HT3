@@ -45,7 +45,7 @@ public class Sorts {
             B[j]= data[m+1+j];
         }
         int i=0,j=0;
-        int k =1;
+        int k =a;
         while(i< n1&& j<n2){
             if(A[i]<=B[j]){
                 data[k]=A[i];
