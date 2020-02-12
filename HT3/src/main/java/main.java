@@ -14,6 +14,7 @@ public class main {
     public static void main (String[]args){
      //Se instancia la clase que creara el archivo
         archivos arch = new archivos();
+        Scanner scan = new Scanner(System.in);
         arch.crear_archivo();//se crea el archivo
         String archivo = "numeros.txt";//una vez cread el archivo se guarda en una variable
         File fichero = new File (archivo);//se instancia el indicador de archivo que se usará
@@ -36,6 +37,14 @@ public class main {
             int entero = Integer.parseInt(numero);
             numeros[i]=entero;
         }
-        System.out.println("Sorts:\n 1 Selection Sort \n 2. Merge Sort \n 3. Quick Sort \n 4. Radix Sort \n 5. ");
+        System.out.println("Sorts:\n 1 Selection Sort \n 2. Merge Sort \n 3. Quick Sort \n 4. Radix Sort \n 5. Bubble Sort ");
+        int op = scan.nextInt();
+        Sorts sorts = new Sorts();
+        switch(op){
+            case 1:
+                sorts.selectionSort(numeros, 10);
+                sorts.toString(numeros,10);
+                break;
+        }
     }
 }
