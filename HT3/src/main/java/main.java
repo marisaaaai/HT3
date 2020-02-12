@@ -30,6 +30,12 @@ public class main {
         }
         //System.out.println(linea);muestra que la linea si guardo lo que se encontraba en el archivo
         String [] numerosArray = linea.split("\\s");
-        
+        int [] numeros = new int [3000];
+        for(int i=0;i<3000;i++){
+            String numero = numerosArray[i];
+            int entero = Integer.parseInt(numero);
+            numeros[i]=entero;
+        }
+        System.out.println("Sorts:\n 1 Selection Sort \n 2. Merge Sort \n 3. Quick Sort \n 4. Radix Sort \n 5. ");
     }
 }
