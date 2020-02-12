@@ -16,7 +16,7 @@ public class archivos {
         int w =0;
         try (PrintWriter salida = new PrintWriter("C:/Users/maris/OneDrive/Escritorio/HT3/HT3/src/main/java/numeros.txt")){
             while(w<3000){
-                int n = rand.nextInt();
+                int n = rand.nextInt(300);
                 salida.print(n + " ");
                 w++;
             }
