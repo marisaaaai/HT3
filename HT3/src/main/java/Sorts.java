@@ -33,5 +33,49 @@ public class Sorts {
         }
         System.out.println();
     }
+    public void merge(int data[], int a, int m, int b){
+        int n1= m-a+1;
+        int n2 = b-m;
+        int A[]= new int[n1];
+        int B[]= new int[n2];
+        for(int i = 0; i<n1;i++){
+            A[i]=data[a+i];
+        }
+        for(int j =0;j<n2;j++){
+            B[j]= data[m+1+j];
+        }
+        int i=0,j=0;
+        int k =1;
+        while(i< n1&& j<n2){
+            if(A[i]<=B[j]){
+                data[k]=A[i];
+                i++;
+            }
+            else{
+                data[k]=B[i];
+                j++;
+            }
+            k++;
+        }
+        while(i<n1){
+            data[k]=A[i];
+            i++;
+            k++;
+        }
+        while(j<n2){
+            data[k]=B[j];
+            j++;
+            k++;
+        }
+        
+    }
+    public void sort(int data[],int a,int b){
+        if(a<b){
+            int m=(a+b)/2;
+            sort(data,a,m);
+            sort(data,m+1,b);
+            merge(data,a,m,b);
+        }
+    }
  
 }
